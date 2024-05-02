@@ -52,3 +52,11 @@ function loadCategoryFilters(){
 
     categoryFilterSection.appendChild(categoryFilterContainer);
 }
+
+async function implementSearch(){
+    // search button element
+    const searchButton = document.getElementById('search-btn');
+    const searchInput = document.getElementById('search-input');
+
+    // adding event listener
+}
