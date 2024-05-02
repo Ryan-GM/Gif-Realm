@@ -59,4 +59,17 @@ async function implementSearch(){
     const searchInput = document.getElementById('search-input');
 
     // adding event listener
+    searchButton.addEventListener('click', async ()=>{
+        const query = searchInput.ariaValueMax.trim();
+        if(query !== ''){
+            try{
+                const apiKey = 'KZL42s1yyYkYL5GdffziJjCQNN3yDyY4';
+                const responseSearch = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=10`);
+                const data = await responseSearch.json();
+                console.log('Search results:', data);
+            }catch(error){
+                console.error('Error fetching search results:', error);
+            }
+        }
+    });
 }
