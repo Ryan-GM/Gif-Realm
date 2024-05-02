@@ -34,4 +34,21 @@ async function fetchRandomGIFs(){
 function loadCategoryFilters(){
     // defining predefined categories
     const categories = ['Emotions', 'Reactions', 'Animals', 'Memes'];
+
+    // DOM manipulation to access element to display categories
+    const categoryFilterSection = document.getElementById('category-filtering');
+    const categoryFilterContainer = document.createElement('div');
+    categoryFilterContainer.classList.add('list-group');
+
+    // iterating over categories and creating filter buttons
+    categories.forEach(category =>{
+        const filterButton = document.createElement('button');
+        filterButton.classList.add('list-group-item', 'list-group-iem-action');
+        filterButton.textContent = category;
+        // event listener to filter GIFs based on category
+        filterButton.addEventListener('click', () => filterCategory(category));
+        categoryFilterContainer.appendChild(filterButton);
+    });
+
+    categoryFilterSection.appendChild(categoryFilterContainer);
 }
