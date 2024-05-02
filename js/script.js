@@ -30,3 +30,8 @@ async function fetchRandomGIFs(){
         console.error('Error fetching random GIFs:', error);
     }
 }
+
+function loadCategoryFilters(){
+    // defining predefined categories
+    const categories = ['Emotions', 'Reactions', 'Animals', 'Memes'];
+}
