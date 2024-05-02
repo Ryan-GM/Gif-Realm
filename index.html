@@ -9,35 +9,44 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>GifGenius</h1>
-        <!-- Search Bar -->
-        <div id="search-bar">
-            <input type="text" id="search-input" placeholder="Search for GIFs...">
-            <button id="search-btn">Search</button>
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+        <h1 class="display-4 text-center">GifGenius</h1>
+                <!-- Search Bar -->
+                <div class="input-group mb-3" id="search-bar">
+                    <input type="text" id="search-input" placeholder="Search for GIFs...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" id="search-btn">Search</button>
+                    </div>
+                    
+                </div>
         </div>
+        
     </header>
-    <main>
+    <main class="container my-4">
         <!-- Trending Section -->
         <section id="trending-gifs">
-            <h2>Trending GIFS</h2>
+            <h2 class="h4">Trending GIFS</h2>
             <!-- Display trending GIFs -->
         </section>
-        <section id="random-gifs">
-            <h2>Random GIFs</h2>
+        <section id="random-gifs" class="mt-4">
+            <h2 class="h4">Random GIFs</h2>
             <!-- Display random GIFs -->
         </section>
         <!-- Category-Based Filtering Section -->
-        <section id="category-filtering">
-            <h2>Category-Based Filtering</h2>
+        <section id="category-filtering" class="mt-4">
+            <h2 class="h4">Category-Based Filtering</h2>
             <!-- Display category filters -->
         </section>
     </main>
-    <footer>
-        <!-- Share and Embed Options -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <!-- Share and Embed Options -->
         <div id="share-options">
             <!-- Implement here -->
         </div>
+        </div>
+        
     </footer>
     <script src="js/script.js"></script>
 
