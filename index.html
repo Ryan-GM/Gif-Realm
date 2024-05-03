@@ -5,39 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giphy Realm</title>
     <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-PQmf3X6oyVViy3kqUZ6kcpbKqNqQ0u/SgUjwGSR//Gp+hshIJvPL9QMMXHlUMvSw3DTRdFT4/Q8PqRlTovbMdQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="bg-dark text-white py-4">
         <div class="container">
-        <h1 class="display-4 text-center">GifGenius</h1>
-                <!-- Search Bar -->
-                <div class="input-group mb-3" id="search-bar">
-                    <input type="text" id="search-input" placeholder="Search for GIFs...">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" id="search-btn">Search</button>
-                    </div>
-                    
+            <h1 class="display-4 text-center">GifGenius</h1>
+            <!-- Search Bar -->
+            <div class="input-group mb-3" id="search-bar">
+                <input type="text" id="search-input" placeholder="Search for GIFs...">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" id="search-btn">Search</button>
                 </div>
+            </div>
+            <!-- Favorites Button -->
+            <div class="text-center">
+                <button class="btn btn-success" id="favorites-btn">Favorites</button>
+            </div>
         </div>
-        
     </header>
     <main class="container my-4">
+        <section id="search-results">
+            <!-- Display searched GIFs here -->
+        </section>
+        <!-- Favorites Section -->
+    <section id="favorites-gifs" style="display: none;">
+        <h2 class="h4">Favorite GIFs</h2>
+        <!-- Display favorite GIFs here -->
+    </section>
         <!-- Trending Section -->
         <section id="trending-gifs">
             <h2 class="h4">Trending GIFS</h2>
             <!-- Display trending GIFs -->
         </section>
-        <section id="random-gifs" class="mt-4">
+        <section id="random-gifs" class="mt-4" style="height: 30%; width: 80%;">
             <h2 class="h4">Random GIFs</h2>
             <!-- Display random GIFs -->
         </section>
         <!-- Category-Based Filtering Section -->
-        <section id="category-filtering" class="mt-4">
-            <h2 class="h4">Category-Based Filtering</h2>
-            <!-- Display category filters -->
-        </section>
+        
+                <section id="category-filtering" class="mt-4">
+                    <h2 class="h4">Category-Based Filtering</h2>
+                    <!-- Display category filters -->
+                </section>
+                <section id="category-gifs" >
+                    <!-- Display filtered GIFs here -->
+                </section>
     </main>
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
